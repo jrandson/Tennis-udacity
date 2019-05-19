@@ -21,7 +21,7 @@ In DDPG, it used a buffer with store a bunch of steps responses (state, action, 
 
 Inproviments in the exploration is done by adding some noise to the action. for this purpose it was used the Ornstein-Uhlenbeck Process, which has been proved to improve the action exploration according to this ddpg papper
 
-This environment was solved using a very similar solution used to solve the ![Reacher environment](https://github.com/jrandson/Reacher-udacity). The difference, this time, is that now we have two agents competing one with the other.
+This environment was solved using a very similar solution used to solve the [Reacher project](https://github.com/jrandson/Reacher-udacity). The difference, this time, is that now we have two agents competing one with the other.
 
 The archtecture of the projec counts with a agent class that uses these to solve the environmet. The main parans used is described bellow:
 
