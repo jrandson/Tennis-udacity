@@ -33,6 +33,8 @@ The archtecture of the projec counts with a agent class that uses these to solve
 * The MSE loss function was used to optimize the models.
 * The result of training can be seen bellow
 
+Some test were done in order to achieve some iprovements, but it was not successfully. These approaches include introducing droput layers and use regularizations in order to avoid metalearn. Also, some test were done initializing the weights of the layers with a normal distribution, but none of these approachs, in deed brought, significant improvements, but rather introduce more instability to the Actor and Critic models training.
+
 See the graph of scores x episodes score x epsodes
 ![scores x #episodes](score_x_episodes.png)
 
@@ -44,11 +46,8 @@ For more details about continous control with DDPG algorithm, read the [DDPG pap
 
 
 #### Further works
-As improviments of this implementation, it is convenient introduce some convolutional layers such as Conv1d and Conv2d and observe what results the training will have.
 
-Another point is explore some ways to initialize the weights of the models. Maybe a normal distribution could lead to interesting results at the end of thaining.
-
-Although the neuro nets used in this implementation has generalized well the learning process, there are some adtional improviments that could be inplemented, such as dropout in the hidden layers and a reularization functions. These method are good strategies to avoid overfitting and will keep the weights of the models low, making them simple and capable to generalize well the sapce into the actions.
+These method are good strategies to avoid overfitting and will keep the weights of the models low, making them simple and capable to generalize well the sapce into the actions.
 
 In addition,  it is notable the quantity of hyperparams this algorithm requires, which encourages us to try a sistematic way to find the best fit to all of them. this cold be reach by using a grid searh are eve, a stocastic optimization method, such as PSO or genetic algorithm. Of course, it will be strong computational demmanding but can bring some interesting results.
 
