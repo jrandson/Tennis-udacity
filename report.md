@@ -50,4 +50,6 @@ Another point is explore some ways to initialize the weights of the models. Mayb
 
 Although the neuro nets used in this implementation has generalized well the learning process, there are some adtional improviments that could be inplemented, such as dropout in the hidden layers and a reularization functions. These method are good strategies to avoid overfitting and will keep the weights of the models low, making them simple and capable to generalize well the sapce into the actions.
 
-Finally, it is notible the quantity of hyperparams this algorithm requires, which encourages us to try a sistematic way to find the best fit to all of them. this cold be reach by using a grid searh are eve, a stocastic optimization method, such as PSO or genetic algorithm. Of course, it will be strong computational demmanding but can bring some interesting results.
+In addition,  it is notable the quantity of hyperparams this algorithm requires, which encourages us to try a sistematic way to find the best fit to all of them. this cold be reach by using a grid searh are eve, a stocastic optimization method, such as PSO or genetic algorithm. Of course, it will be strong computational demmanding but can bring some interesting results.
+
+Finally, there are others algorith for continuous control in deep reiforcement learng which would be interesting to test, such as A2C and PPO, for example
