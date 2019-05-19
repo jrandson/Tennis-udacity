@@ -85,7 +85,7 @@ if __name__ == "__main__":
     ax.plot(np.arange(1, len(scores) + 1), scores)
     ax.set_ylabel('Scores')
     ax.set_xlabel('Episode #')
-    fig.savefig("score_x_apisodes.png")
+    fig.savefig("score_x_episodes.png")
     plt.show()
 
     w = 10
@@ -94,5 +94,5 @@ if __name__ == "__main__":
     ax.plot(np.arange(1, len(mean_score) + 1), mean_score)
     ax.set_ylabel('Scores')
     ax.set_xlabel('Episode #')
-    fig.savefig("score_x_apisodes_smorthed.png")
+    fig.savefig("score_x_episodes_smorthed.png")
     plt.show()
