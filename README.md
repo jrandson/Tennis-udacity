@@ -1,12 +1,16 @@
 # Tennis with reiforcement learning
 
+
+
+### The environment
+
+#### Tennis
+
 ![An example of Tennis environment](tennis.gif)
  
 
 In this project, the goal is to solve the [Tennis](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#tennis) environment.
 
-
-### The environment
 
 In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it 
 receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward 
