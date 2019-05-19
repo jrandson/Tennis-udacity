@@ -30,8 +30,10 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
 ### Environment Setup
 
-For this project, you can download it, [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux.zip) 
-from one of the links below. 
+For this project, you can download from one of the links below:
+* Linux environment:  [Download](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux.zip) 
+* MAC OSX environemnt: [Download](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis.app.zip)
+
 
 Then, place the file in the Tennis/ folder and unzip (or decompress) the file. Open the main.py file and adjust the path 
 of the Tennis environment to the correct one:
