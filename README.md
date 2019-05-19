@@ -1,6 +1,6 @@
 # Tennis with reiforcement learning
 
-![An example of Tennis environment](tennis.png)
+![An example of Tennis environment](tennis.gif)
  
 
 In this project, the goal is to solve the [Tennis](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#tennis) environment.
@@ -35,14 +35,12 @@ of the Tennis environment to the correct one:
 `env = UnityEnvironment(file_name="./Reacher_Linux/Reacher.x86_64", no_graphics=True)`
 
 For this project, you are encouraged to use a virtual env. You can set it using anaconda: 
-
 `$ conda create drlnd-env` and, then, activate it: `$ conda activate drlnd-env`. 
 
 Finally, you can install the requirements for this project by running `$ pip install -r requirements.txt`
-
 After the instaltion is finished, run the main.py file by `$ python main.py` and observe the train model running
 
-for the traing realized int this project the result can be observed at the graph bellow.
+For the traing realized int this project the result can be observed at the graph bellow.
 
 ![smorthed scores x #episodes](score_x_episodes_smorthed.png)
 
