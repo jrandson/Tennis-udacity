@@ -1,15 +1,20 @@
 import random
+import copy
+from collections import deque, namedtuple
 
 import numpy as np
+import matplotlib.pyplot as plt
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import torch.optim as optim
 
-seed = 3298
+from unityagents import UnityEnvironment
+
+seed = 1000
 random.seed(seed)
 torch.manual_seed(seed)
-
 
 def hidden_init(layer):
     fan_in = layer.weight.data.size()[0]

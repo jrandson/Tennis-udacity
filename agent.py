@@ -1,25 +1,17 @@
 import random
 import copy
-from collections import deque, namedtuple
-
-import numpy as np
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+import numpy as np
+from collections import deque, namedtuple
 
 from models import Actor, Critic
 
-
-
-seed = 3298
-random.seed(seed)
-torch.manual_seed(seed)
-
-DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-
 Experience = namedtuple('Experience', 'state action reward next_state done')
+DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 class Replay:
     def __init__(self, action_size, buffer_size, batch_size):
@@ -50,15 +42,15 @@ class Agent:
     def __init__(self, state_size, action_size):
 
         self.discount = 0.99
-        self.target_mix = 1e-3
+        self.target_mix = 5e-3
 
-        self.online_actor = Actor(state_size, action_size, fc1_units=256, fc2_units=256).to(DEVICE)
-        self.target_actor = Actor(state_size, action_size, fc1_units=256, fc2_units=256).to(DEVICE)
-        self.actor_opt = optim.Adam(self.online_actor.parameters(), lr=3e-4)
+        self.online_actor = Actor(state_size, action_size, fc1_units=256, fc2_units=128).to(DEVICE)
+        self.target_actor = Actor(state_size, action_size, fc1_units=256, fc2_units=128).to(DEVICE)
+        self.actor_opt = optim.Adam(self.online_actor.parameters(), lr=3e-3)
 
-        self.online_critic = Critic(state_size, action_size, fc1_units=256, fc2_units=256).to(DEVICE)
-        self.target_critic = Critic(state_size, action_size, fc1_units=256, fc2_units=256).to(DEVICE)
-        self.critic_opt = optim.Adam(self.online_critic.parameters(), lr=3e-4)
+        self.online_critic = Critic(state_size, action_size, fc1_units=256, fc2_units=128).to(DEVICE)
+        self.target_critic = Critic(state_size, action_size, fc1_units=256, fc2_units=128).to(DEVICE)
+        self.critic_opt = optim.Adam(self.online_critic.parameters(), lr=3e-3)
 
         self.noise = OrnsteinUhlenbeck(action_size, mu=0., theta=0.15, sigma=0.05)
         self.replay = Replay(action_size, buffer_size=int(1e6), batch_size=128)
