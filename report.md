@@ -35,11 +35,10 @@ The archtecture of the projec counts with a agent class that uses these to solve
 
 See the graph of scores x episodes score x epsodes
 ![scores x #episodes](score_x_episodes.png)
+
 And here, you can observe data above, now in a smorthed graph score x epsodes
 ![scores x #episodes (smorthed)](score_x_episodes_smorthed.png)
 
-#### critic points
-The main iproviments observed came in the neuro net models when it was consideres grow the number of neurons in the hidden layers and mostly importan, when it was included a batch normalization between the hidden layers.
 
 For more details about continous control with DDPG algorithm, read the [DDPG papper](https://arxiv.org/pdf/1509.02971.pdf)
 
